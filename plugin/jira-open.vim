@@ -22,7 +22,7 @@ function! JiraOpen()
     " Cursor not on a ticket.
     return 0
   endif
-  let key = Get_visual_selection()
+  let key = s:get_visual_selection()
   let cmd = ':!open ' . g:jira_browse_url . key
   execute cmd
 endfun
