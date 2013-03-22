@@ -27,4 +27,6 @@ function! JiraOpen()
   execute cmd
 endfun
 
-map <unique> <leader>jo :<C-U>call JiraOpen()<cr><cr>
+if mapcheck('<leader>jo', 'n') == ""
+  map <unique> <leader>jo :<C-U>call JiraOpen()<cr><cr>
+end
